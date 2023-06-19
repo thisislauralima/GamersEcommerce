@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamersEcommerce.WebApi", "GamersEcommerce\GamersEcommerce.WebApi.csproj", "{F348AB69-B26D-470F-B6B9-FFF226DB7848}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamersEcommerce.Application", "GamersEcommerce.Application\GamersEcommerce.Application.csproj", "{C35D5BEA-4E47-40DC-ADB8-E69580EA7BF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamersEcommerce.Application", "GamersEcommerce.Application\GamersEcommerce.Application.csproj", "{C35D5BEA-4E47-40DC-ADB8-E69580EA7BF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamersEcommerce.Domain", "GamersEcommerce.Domain\GamersEcommerce.Domain.csproj", "{C950726A-BE5D-4AFF-B526-92D8D7692608}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamersEcommerce.Domain", "GamersEcommerce.Domain\GamersEcommerce.Domain.csproj", "{C950726A-BE5D-4AFF-B526-92D8D7692608}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamersEcommerce.Infrastructure.Oracle", "GamersEcommerce.Infrastructure.Oracle\GamersEcommerce.Infrastructure.Oracle.csproj", "{A1999D31-BD69-4EB0-B883-CF5056B71730}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamersEcommerce.Infrastructure.Oracle", "GamersEcommerce.Infrastructure.Oracle\GamersEcommerce.Infrastructure.Oracle.csproj", "{A1999D31-BD69-4EB0-B883-CF5056B71730}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamersEcommerce.WebApi", "..\GamersEcommerce.WebApi\GamersEcommerce.WebApi.csproj", "{C1AAF97E-8E91-4034-BE43-B2E2791A4F73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F348AB69-B26D-470F-B6B9-FFF226DB7848}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F348AB69-B26D-470F-B6B9-FFF226DB7848}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F348AB69-B26D-470F-B6B9-FFF226DB7848}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F348AB69-B26D-470F-B6B9-FFF226DB7848}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C35D5BEA-4E47-40DC-ADB8-E69580EA7BF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C35D5BEA-4E47-40DC-ADB8-E69580EA7BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C35D5BEA-4E47-40DC-ADB8-E69580EA7BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{A1999D31-BD69-4EB0-B883-CF5056B71730}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1999D31-BD69-4EB0-B883-CF5056B71730}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1999D31-BD69-4EB0-B883-CF5056B71730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1AAF97E-8E91-4034-BE43-B2E2791A4F73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1AAF97E-8E91-4034-BE43-B2E2791A4F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1AAF97E-8E91-4034-BE43-B2E2791A4F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1AAF97E-8E91-4034-BE43-B2E2791A4F73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
