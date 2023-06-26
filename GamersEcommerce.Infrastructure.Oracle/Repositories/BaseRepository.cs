@@ -2,6 +2,7 @@
 using GamersEcommerce.Domain;
 using GamersEcommerce.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Net;
 
 namespace GamersEcommerce.Infrastructure.Oracle.Repositories
 {
@@ -21,5 +22,11 @@ namespace GamersEcommerce.Infrastructure.Oracle.Repositories
         {
             return await _context.Products.ToListAsync();
         }
+
+        //public Task<Product> RegisterNewProductAsync(Product product)
+        //{
+        //    var dbproduct = _context.Products.Find(product.Id);
+        //    return dbproduct ?? dbproduct;
+        //}
     }
 }

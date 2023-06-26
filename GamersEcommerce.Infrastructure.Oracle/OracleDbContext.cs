@@ -1,8 +1,6 @@
 ﻿using GamersEcommerce.Domain;
 using GamersEcommerce.Infrastructure.Oracle.Extensions;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Reflection.Emit;
 
 namespace Ecommerce.Infrastructure.Oracle
 {
@@ -14,6 +12,7 @@ namespace Ecommerce.Infrastructure.Oracle
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.HasDefaultSchema("GammerEcommerce");
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(OracleDbContext).Assembly);
             modelBuilder.SetDefaultStringLength();
         }
