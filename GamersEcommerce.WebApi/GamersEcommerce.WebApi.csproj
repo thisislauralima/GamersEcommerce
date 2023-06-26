@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GamersEcommerce.Application\GamersEcommerce.Application.csproj" />
     <ProjectReference Include="..\GamersEcommerce.Infrastructure.Oracle\GamersEcommerce.Infrastructure.Oracle.csproj" />
   </ItemGroup>
 

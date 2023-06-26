@@ -10,16 +10,16 @@ namespace GamersEcommerce.Infrastructure.Oracle.UnitOfWork
         {
             _repository = repository;
         }
-        public void RegisterNewProductAsync(Product product)
-        {
-            try
-            {
-                _repository.RegisterNewProductAsync(product);
-            }
-            catch
-            {
-                throw;
-            }
-        }
+        //public void RegisterNewProductAsync(Product product)
+        //{
+        //    try
+        //    {
+        //        _repository.RegisterNewProductAsync(product);
+        //    }
+        //    catch
+        //    {
+        //        throw;
+        //    }
+        //}
     }
 }
