@@ -1,19 +1,19 @@
 ﻿using GamersEcommerce.Application;
-using GamersEcommerce.Infrastructure.Oracle.Extensions;
 using GamersEcommerce.Infrastructure.RabbitMq;
+using GamersEcommerce.Infrastructure.SqlServer.DependencyInjection;
 using GamersEcommerce.WebApi.DependencyInjection;
 
 namespace GamersEcommerce.WebApi
 {
     public class Startup
     {
+        private readonly IConfiguration _configuration;
         public virtual void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
-            services.AddOracleDbContext();
-            services.AddOracleRepositories();
+            services.AddSqlServerDbContext(_configuration);
             services.AddRabbitMqDependecyInjection();
             services.AddApplicationDependecyInjection();
         }
