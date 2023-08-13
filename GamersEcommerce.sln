@@ -7,11 +7,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamersEcommerce.Application
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamersEcommerce.Domain", "GamersEcommerce.Domain\GamersEcommerce.Domain.csproj", "{C950726A-BE5D-4AFF-B526-92D8D7692608}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamersEcommerce.Infrastructure.Oracle", "GamersEcommerce.Infrastructure.Oracle\GamersEcommerce.Infrastructure.Oracle.csproj", "{A1999D31-BD69-4EB0-B883-CF5056B71730}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamersEcommerce.Infrastructure.SqlServer", "GamersEcommerce.Infrastructure.SqlServer\GamersEcommerce.Infrastructure.SqlServer.csproj", "{A1999D31-BD69-4EB0-B883-CF5056B71730}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamersEcommerce.WebApi", "GamersEcommerce.WebApi\GamersEcommerce.WebApi.csproj", "{C1AAF97E-8E91-4034-BE43-B2E2791A4F73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamersEcommerce.Infrastructure.RabbitMq", "GamersEcommerce.Infrastructure.RabbitMq\GamersEcommerce.Infrastructure.RabbitMq.csproj", "{3B2282E1-D53A-458A-9425-3FC2BF335D62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamersEcommerce.Infrastructure.RabbitMq", "GamersEcommerce.Infrastructure.RabbitMq\GamersEcommerce.Infrastructure.RabbitMq.csproj", "{3B2282E1-D53A-458A-9425-3FC2BF335D62}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{66BFCAF9-ECCE-4862-8B10-F5C73F0D1AAE}"
+	ProjectSection(SolutionItems) = preProject
+		appsettings.json = appsettings.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{10B7C101-3F74-4AD4-971B-59F071639D9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{1F2480E5-9323-47BC-8BB7-DE0F679B5C51}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GamersEcommerce.IntegrationTests", "GamersEcommerce.IntegrationTests\GamersEcommerce.IntegrationTests.csproj", "{978AF557-D615-4CC2-AF13-88A2F7FA1BB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +53,21 @@ Global
 		{3B2282E1-D53A-458A-9425-3FC2BF335D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B2282E1-D53A-458A-9425-3FC2BF335D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B2282E1-D53A-458A-9425-3FC2BF335D62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{978AF557-D615-4CC2-AF13-88A2F7FA1BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{978AF557-D615-4CC2-AF13-88A2F7FA1BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{978AF557-D615-4CC2-AF13-88A2F7FA1BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{978AF557-D615-4CC2-AF13-88A2F7FA1BB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C35D5BEA-4E47-40DC-ADB8-E69580EA7BF3} = {66BFCAF9-ECCE-4862-8B10-F5C73F0D1AAE}
+		{C950726A-BE5D-4AFF-B526-92D8D7692608} = {66BFCAF9-ECCE-4862-8B10-F5C73F0D1AAE}
+		{A1999D31-BD69-4EB0-B883-CF5056B71730} = {66BFCAF9-ECCE-4862-8B10-F5C73F0D1AAE}
+		{C1AAF97E-8E91-4034-BE43-B2E2791A4F73} = {66BFCAF9-ECCE-4862-8B10-F5C73F0D1AAE}
+		{3B2282E1-D53A-458A-9425-3FC2BF335D62} = {66BFCAF9-ECCE-4862-8B10-F5C73F0D1AAE}
+		{978AF557-D615-4CC2-AF13-88A2F7FA1BB2} = {10B7C101-3F74-4AD4-971B-59F071639D9E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F4F9204D-D3D1-4DBB-ABC7-7B83720F755A}
