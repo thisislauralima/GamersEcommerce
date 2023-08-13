@@ -9,14 +9,71 @@ GO -- aspas duplas serão interpretadas como [], sendo interpretadas pelo sql co
 -- se fosse simples as aspas seriam interpratadas interpretadas como '', que são usadas para strings no sql
 
 CREATE TABLE [dbo].PRODUCT(
- [ProductId] INT NOT NULL,
+ [Product_Id] INT NOT NULL,
  [Name] [nvarchar] (150) NOT NULL,
- [CategoryId] INT NOT NULL,
+ [Category_Id] INT NOT NULL,
  [Product_Registration_Date] DATETIME NOT NULL,
- CONSTRAINT [ProductId] PRIMARY KEY CLUSTERED
- ([ProductId] ASC)
- WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+ CONSTRAINT [Product_Id] PRIMARY KEY CLUSTERED
+ ([Product_Id] ASC)
+ WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
 )
 ON [PRIMARY]
 GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].PRODUCT_STOCK_QUANTITY(
+ [Product_Stock_Quantity_Id] INT NOT NULL,
+ [Product_Quantity] INT NOT NULL,
+ [Is_Out_Of_Stock] BIT NOT NULL,
+ [Product_Id] INT NOT NULL,
+ CONSTRAINT [FK_ProductId] FOREIGN KEY (Product_Id) REFERENCES PRODUCT(Product_Id),
+ CONSTRAINT [Product_Stock_Quantity_Id] PRIMARY KEY CLUSTERED
+ ([Product_Stock_Quantity_Id] ASC)
+ WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+)
+ON [PRIMARY]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].PRODUCT_SALE_HISTORY(
+ [Product_Sale_History_Id] INT NOT NULL,
+ [Product_Id] INT NOT NULL,
+ [Product_Registration_Date] DATETIME NOT NULL,
+ CONSTRAINT [FK_PSH_ProductId] FOREIGN KEY (Product_Id) REFERENCES Product(Product_Id),
+ CONSTRAINT [Product_Sale_History_Id] PRIMARY KEY CLUSTERED
+ ([Product_Sale_History_Id] ASC)
+ WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+)
+ON [PRIMARY]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].CATEGORY(
+ [Category_Id] INT NOT NULL,
+ [Name] Varchar(150) NOT NULL,
+ [Product_Id] INT NOT NULL,
+ CONSTRAINT [FK_Ctg_ProductId] FOREIGN KEY (Product_Id) REFERENCES Product(Product_Id),
+ CONSTRAINT [Category_Id] PRIMARY KEY CLUSTERED
+ ([Category_Id] ASC)
+ WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+)
+ON [PRIMARY]
+GO
+
 COMMIT TRANSACTION;
+
