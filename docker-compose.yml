@@ -1,0 +1,25 @@
+version: "3"
+services: 
+  sql_server_db: # nome de escolha livre
+    container_name: sql-server-gamer-ecommerce
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+        - SA_PASSWORD=T3So#325t3ASf!@$@
+        - ACCEPT_EULA=Y
+    ports:
+      - "1435:1434"
+    volumes:
+      - "./tests/IntegrationTests/DataBase/SQLServer:/usr/share/sqlserver/scripts/"
+    command:
+      - /bin/bash
+      - -c
+      - |
+       /opt/mssql/bin/sqlserver &
+       sleep 30 # tempo de espera para o sql ir para background
+       /opt/mssql-tools/bin/sqlcmd -u sa -P S9cr#t -l 30 -e -i ./test/IntegrationTests/Database/create-database.sql
+       /opt/mssql-tools/bin/sqlcmd -u sa -P S9cr#t -l 30 -e -i ./test/IntegrationTests/Database/create-tables.sql
+       /opt/mssql-tools/bin/sqlcmd -u sa -P S9cr#t -l 30 -e -i ./test/IntegrationTests/Database/inserts.sql
+       sleep infinity #para o container não desligar, deixa a thread sleep
+
+
+#https://stackoverflow.com/questions/51050590/run-sql-script-after-start-of-sql-server-on-docker
