@@ -20,6 +20,7 @@ namespace GamersEcommerce.WebApi
             services.AddApplicationDependecyInjection();
             services.AddServices();
             services.AddRabbitMqDependecyInjection();
+            services.AddAuthenticationConfig(_configuration);
             //services.AddAuthenticationConfig(_configuration);
         }
 
