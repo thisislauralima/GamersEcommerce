@@ -1,4 +1,4 @@
-﻿using GamersEcommerce.WebApi.Model.RabbitMQSender;
+﻿using GamersEcommerce.Infrastructure.RabbitMq.Model.RabbitMQSender;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace GamersEcommerce.Infrastructure.RabbitMq
@@ -7,7 +7,8 @@ namespace GamersEcommerce.Infrastructure.RabbitMq
     {
         public static IServiceCollection AddRabbitMqDependecyInjection(this IServiceCollection services)
         {
-            return services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
+            services.AddSingleton<IRabbitMQMessageSender, RabbitMQMessageSender>();
+            return services;
         }
     }
 }

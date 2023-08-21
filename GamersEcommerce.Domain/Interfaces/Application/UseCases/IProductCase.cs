@@ -1,4 +1,6 @@
-﻿namespace GamersEcommerce.Domain.Interfaces
+﻿using GamersEcommerce.Domain.Entities;
+
+namespace GamersEcommerce.Domain.Application.UseCases
 {
     public interface IProductCase
     {

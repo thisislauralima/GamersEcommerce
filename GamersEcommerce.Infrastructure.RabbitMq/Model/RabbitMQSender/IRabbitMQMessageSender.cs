@@ -1,6 +1,6 @@
 ﻿using GamersEcommerce.Infrastructure.RabbitMq;
 
-namespace GamersEcommerce.WebApi.Model.RabbitMQSender
+namespace GamersEcommerce.Infrastructure.RabbitMq.Model.RabbitMQSender
 {
     public interface IRabbitMQMessageSender
     {

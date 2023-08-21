@@ -1,26 +1,24 @@
-﻿using GamersEcommerce.Domain;
-using GamersEcommerce.Domain.Interfaces;
+﻿using GamersEcommerce.Domain.Application.UseCases;
+using GamersEcommerce.Domain.Entities;
+using GamersEcommerce.Domain.Interfaces.Services;
 
 namespace GamersEcommerce.Application
 {
-
-    // essa camada é para as lógicas de negócio e implementações
-    // para implementar essas lógicas ela utiliza use cases
     // use case é um requerimento funcional obrigatório para a aplicação
     public class ProductCase : IProductCase
     {
-        IBaseRepository _repository;
+        IProductService _productService;
 
-        public ProductCase(IBaseRepository repository)
+        public ProductCase(IProductService productService)
         {
-            _repository = repository;
+            _productService = productService;
         }
 
         public async Task<IEnumerable<Product>> GetAllProductsAsync()
         {
             try
             {
-                return await _repository.GetAllProductsAsync();
+                return await _productService.GetAllProductsAsync();
             }
             catch
             {

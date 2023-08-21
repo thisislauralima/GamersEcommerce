@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
 
-namespace GamersEcommerce.Infrastructure.Oracle.Extensions
+namespace GamersEcommerce.Infrastructure.SqlServer.Extensions
 {
     public static class ModelBuilderExtension
     {

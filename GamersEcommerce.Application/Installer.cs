@@ -1,4 +1,4 @@
-﻿using GamersEcommerce.Domain.Interfaces;
+﻿using GamersEcommerce.Domain.Application.UseCases;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace GamersEcommerce.Application
@@ -7,8 +7,10 @@ namespace GamersEcommerce.Application
     {
         public static IServiceCollection AddApplicationDependecyInjection(this IServiceCollection services)
         {
-            return services
+            services
                 .AddScoped<IProductCase, ProductCase>();
+
+            return services;
         }
     }
 }

@@ -66,8 +66,6 @@ GO
 CREATE TABLE [dbo].CATEGORY(
  [Category_Id] INT NOT NULL,
  [Name] Varchar(150) NOT NULL,
- [Product_Id] INT NOT NULL,
- CONSTRAINT [FK_Ctg_ProductId] FOREIGN KEY (Product_Id) REFERENCES Product(Product_Id),
  CONSTRAINT [Category_Id] PRIMARY KEY CLUSTERED
  ([Category_Id] ASC)
  WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]

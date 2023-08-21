@@ -3,7 +3,7 @@ using RabbitMQ.Client;
 using System.Text;
 using System.Text.Json;
 
-namespace GamersEcommerce.WebApi.Model.RabbitMQSender
+namespace GamersEcommerce.Infrastructure.RabbitMq.Model.RabbitMQSender
 {
     public class RabbitMQMessageSender : IRabbitMQMessageSender
     {

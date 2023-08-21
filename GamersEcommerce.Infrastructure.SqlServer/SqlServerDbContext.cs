@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace GamersEcommerce.Infrastructure.Oracle
+namespace GamersEcommerce.Infrastructure.SqlServer
 {
     public class SqlServerDbContext : DbContext
     {

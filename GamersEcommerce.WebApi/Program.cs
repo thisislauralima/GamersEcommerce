@@ -50,12 +50,10 @@ public static class Program
         }
     }
     private static IHostBuilder CreateHostBuilder(string[] args)
-        => Host.CreateDefaultBuilder(args).ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>())
-            .UseDefaultServiceProvider(
-                (context, options) =>
+        => Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    options.ValidateScopes = context.HostingEnvironment.IsDevelopment();
-                    options.ValidateOnBuild = true;
+                    webBuilder.UseStartup<Startup>();
                 });
     // https://bartwullems.blogspot.com/2019/02/aspnet-core-scope-validation.html
 }
