@@ -1,8 +1,8 @@
-using Microsoft.AspNetCore.Mvc;
-using GamersEcommerce.Domain.Application.UseCases;
 using GamersEcommerce.Domain.Entities;
+using GamersEcommerce.Domain.Interfaces.Application.UseCases;
+using Microsoft.AspNetCore.Mvc;
 
-namespace OracleAPI.Controllers
+namespace GamersEcommerce.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

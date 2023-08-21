@@ -1,5 +1,5 @@
-﻿using GamersEcommerce.Domain.Application.UseCases;
-using GamersEcommerce.Domain.Entities;
+﻿using GamersEcommerce.Domain.Entities;
+using GamersEcommerce.Domain.Interfaces.Application.UseCases;
 using GamersEcommerce.Domain.Interfaces.Services;
 
 namespace GamersEcommerce.Application

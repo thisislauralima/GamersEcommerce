@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
 namespace GamersEcommerce.Infrastructure.SqlServer.Repositories
-
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class
     {

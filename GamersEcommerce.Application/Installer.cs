@@ -1,4 +1,4 @@
-﻿using GamersEcommerce.Domain.Application.UseCases;
+﻿using GamersEcommerce.Domain.Interfaces.Application.UseCases;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace GamersEcommerce.Application
