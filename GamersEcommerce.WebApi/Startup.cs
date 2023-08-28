@@ -4,6 +4,7 @@ using GamersEcommerce.WebApi.DependencyInjection;
 using GamersEcommerce.WebApi.DependencyInjection.Middleware;
 using GamersEcommerce.Service;
 using GamersEcommerce.Infrastructure.SqlServer.DependencyInjection;
+using Microsoft.Extensions.Configuration;
 
 namespace GamersEcommerce.WebApi
 {
@@ -11,6 +12,11 @@ namespace GamersEcommerce.WebApi
     {
         private readonly IConfiguration _configuration;
 
+        public Startup()
+        {
+            _configuration = new ConfigurationBuilder()
+                        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+        }
         public virtual void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
